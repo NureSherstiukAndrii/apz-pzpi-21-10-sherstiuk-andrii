@@ -1,0 +1,115 @@
+@import "src/styles/mixins";
+
+.users-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .role-btns{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      gap: 50px;
+    }
+
+    button{
+      @include btn-theme($theme: lightgrey, $padding: 8px, $border: 1px solid gray, $background-hover: gray);
+    }
+
+    .current-role{
+      background-color: deepskyblue;
+      position: relative;
+
+      &:before{
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        left: -15px;
+        background-image: url("../../../assets/arrows/right-arrow.png");
+        background-repeat: round;
+      }
+
+      &:after{
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 10px;
+        right: -15px;
+        background-image: url("../../../assets/arrows/left-arrow.png");
+        background-repeat: round;
+      }
+    }
+  }
+
+  .users-list{
+    width: 100%;
+    padding: var(--general--padding-768);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+
+    @media (min-width: 992px) {
+      flex-direction: column;
+    }
+
+    &-item{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      position: relative;
+      border: 2px solid lightgray;
+      padding: 10px;
+      border-radius: 10px;
+      
+      @media (min-width: 992px) {
+        align-items: unset;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      &-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @media (min-width: 992px) {
+          flex-direction: row;
+        }
+
+        img{
+          width: 300px;
+
+          @media (min-width: 992px) {
+            width: 200px;
+          }
+        }
+
+        &-details{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+
+      .check-profile{
+        text-decoration: none;
+        color: lightblue;
+
+        @media (min-width: 992px) {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+  .load-more{
+    @include btn-theme();
+  }
+}

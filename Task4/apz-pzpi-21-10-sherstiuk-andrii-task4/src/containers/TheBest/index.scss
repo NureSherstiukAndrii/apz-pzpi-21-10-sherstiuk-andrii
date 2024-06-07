@@ -1,0 +1,8 @@
+.tables-wrapper{
+  flex-grow: 1;
+  padding: var(--general--padding-768);
+
+  @media (min-width: 992px) {
+    padding: var(--general--padding-992);
+  }
+}

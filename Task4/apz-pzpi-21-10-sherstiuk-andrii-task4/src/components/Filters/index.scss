@@ -1,0 +1,81 @@
+@import "src/styles/mixins";
+
+.filters-btns{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 90%;
+}
+.apply-filters-btn{
+  @include btn-theme($theme: white, $padding: 5px, $border: 2px solid, $background-hover: bisque);
+  border-radius: 0;
+  width: 100%;
+}
+
+.filters-form__tablet{
+  display: none;
+
+  @media (min-width: 992px) {
+    display: block;
+    width: 300px;
+  }
+
+  .filters-paragraph{
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
+
+.filters-form__mobile{
+  background: lightgray;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  .filters-paragraph{
+    font-size: 25px;
+    margin-top: 1rem;
+  }
+
+  .close-all-filters{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.price-option{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    @media (min-width: 992px) {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input{
+      @media (min-width: 992px) {
+        width: 100%;
+      }
+    }
+  }
+}

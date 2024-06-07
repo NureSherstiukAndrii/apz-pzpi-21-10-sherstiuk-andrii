@@ -1,0 +1,29 @@
+@import "src/styles/mixins";
+
+.history-form{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid;
+  padding: 30px;
+  position: relative;
+
+  input{
+    padding: 8px;
+    outline: none;
+    border-radius: 10px;
+  }
+
+  .close-form-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .add-result{
+    @include btn-theme();
+  }
+}

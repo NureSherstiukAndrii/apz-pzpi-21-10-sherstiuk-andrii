@@ -1,0 +1,36 @@
+.coach-comments{
+  padding: 1rem;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    margin: 2rem;
+  }
+  &-paragraph {
+    font-size: var(--font--size--paragraph);
+  }
+}
+
+.slick-slider{
+  margin-top: 15px;
+}
+
+.coach-comments-item{
+  background-color: antiquewhite;
+  border-radius: 30px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &-name{
+    gap: 10px;
+    display: flex;
+  }
+}
+
+.slick-dots{
+  position: relative;
+}

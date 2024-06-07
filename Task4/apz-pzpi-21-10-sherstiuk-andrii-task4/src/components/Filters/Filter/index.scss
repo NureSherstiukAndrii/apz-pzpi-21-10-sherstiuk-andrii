@@ -1,0 +1,61 @@
+.filter-item{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  border-bottom: 1px solid;
+  padding: 5px;
+
+  @media (min-width: 992px) {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  span{
+    font-size: 20px;
+  }
+
+  &-options{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: 10px;
+  }
+}
+
+.filter-animation-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+.filter-animation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.filter-animation-exit {
+  opacity: 1;
+}
+.filter-animation-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.filter-arrow-enter {
+  transform: rotate(0deg);
+}
+.filter-arrow-enter-active {
+  transform: rotate(180deg);
+  transition: transform 0.3s;
+}
+.filter-arrow-enter-done {
+  transform: rotate(180deg)
+}
+.filter-arrow-exit {
+  transform: rotate(180deg);
+}
+.filter-arrow-exit-active {
+  transform: rotate(0deg);
+  transition: transform 0.3s;
+}

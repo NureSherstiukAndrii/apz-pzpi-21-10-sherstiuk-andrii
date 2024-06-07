@@ -1,0 +1,14 @@
+@mixin btn-theme($theme: white, $padding: 5px, $border: 2px solid, $background-hover: bisque) {
+  background: $theme;
+  text-decoration: none;
+  color: black;
+  border: $border;
+  padding: $padding;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+
+  &:hover{
+    background-color: $background-hover;
+  }
+}

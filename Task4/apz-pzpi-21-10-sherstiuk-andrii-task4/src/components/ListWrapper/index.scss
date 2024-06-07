@@ -1,0 +1,33 @@
+.list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: fixed;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 20px;
+    left: 50%;
+    margin: auto;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    z-index: 1;
+    width: 95%;
+
+    @media (min-width: 768px) {
+      gap: 0;
+    }
+
+    @media (min-width: 992px) {
+      padding: 30px;
+      width: 900px;
+    }
+
+    &__close {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      background: none;
+      border: 0;
+      cursor: pointer;
+    }
+}

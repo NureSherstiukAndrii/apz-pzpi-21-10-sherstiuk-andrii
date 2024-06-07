@@ -1,0 +1,75 @@
+@import "src/styles/mixins";
+
+.event{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: var(--general--padding-768);
+  gap: 25px;
+  flex-grow: 1;
+  position: relative;
+
+  @media(min-width: 768px){
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: 992px) {
+    padding: var(--general--padding-992);
+  }
+
+  &-del-btn{
+    @include btn-theme();
+    position: absolute;
+    top: -15px;
+  }
+
+  &-img{
+    width: 100%;
+
+    @media (min-width: 768px) {
+      width: 550px;
+    }
+  }
+
+  &-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+
+    .event-detail{
+      display: flex;
+      gap: 10px;
+    }
+
+    .description{
+      flex-direction: column;
+    }
+
+    .people{
+      align-items: center;
+      button{
+        @include btn-theme();
+      }
+    }
+
+    .get-place-btn{
+      @include btn-theme();
+    }
+  }
+}
+
+.user-list-animation-enter {
+  opacity: 0;
+}
+.user-list-animation-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.user-list-animation-exit {
+  opacity: 1;
+}
+.user-list-animation-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}

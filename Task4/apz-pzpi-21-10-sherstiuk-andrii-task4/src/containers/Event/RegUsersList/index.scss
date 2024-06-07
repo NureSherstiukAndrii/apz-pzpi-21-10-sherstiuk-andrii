@@ -1,0 +1,31 @@
+.registered-users{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+  .registered-user{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    align-items: center;
+
+    span{
+      font-size: 16px;
+    }
+
+    &-lastname{
+      margin-left: 10px;
+    }
+
+    &-link{
+      text-decoration: none;
+      color: #f59d63;
+      transition: opacity 0.5s;
+
+      &:hover{
+        opacity: 0.5;
+      }
+    }
+  }
+}

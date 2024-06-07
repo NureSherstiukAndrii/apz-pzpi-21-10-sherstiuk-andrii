@@ -1,0 +1,20 @@
+.user-block{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 5px;
+
+    &__input {
+      border: none;
+      border-bottom: 2px solid gray;
+      padding: 5px;
+      outline: none;
+      transition: border-bottom 0.3s;
+      width: 100%;
+
+      &:hover {
+        border-bottom: 2px solid lightgray;
+      }
+    }
+}

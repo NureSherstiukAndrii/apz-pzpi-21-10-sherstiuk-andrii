@@ -1,0 +1,118 @@
+.team__wrapper{
+  padding: 1rem;
+  text-align: center;
+  margin: var(--general--margin--330);
+
+  @media(min-width: 768px){
+    margin: var(--general--margin--768);
+  }
+
+  @media (min-width: 992px) {
+    margin: var(--general--margin--992);
+  }
+
+  h1{
+    margin-bottom: 15px;
+    font-size: var(--font--size--paragraph);
+  }
+}
+
+.slick-slider{
+
+  @media (min-width: 768px) {
+    padding: 1rem;
+  }
+}
+.slick-slide > div {
+  margin: 0 15px;
+}
+.slick-list {
+  margin: 0 -10px;
+}
+
+.slick-dots{
+  position: relative;
+  bottom: -10px;
+}
+
+.slick-next{
+  right: -20px;
+}
+.slick-prev{
+  left: -20px;
+}
+
+.slick-next:before{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../assets/arrows/right-arrow.png");
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.slick-prev:before{
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../../../assets/arrows/left-arrow.png");
+}
+
+.team__container{
+  border-radius: 30px;
+  height: 250px;
+  background-color: rgb(0 0 0 / 14%);
+  overflow: hidden;
+  position: relative;
+
+  &__info{
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    width: 90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    &__user{
+      display: flex;
+      text-align: left;
+      align-items: center;
+
+      img{
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+      }
+
+      div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-weight: bold;
+        align-items: baseline;
+        margin-left: 10px;
+
+        span:first-child{
+          font-size: 18px;
+
+          @media (min-width: 1250px) {
+            font-size: 25px;
+          }
+        }
+
+        span:last-child{
+          font-size: 14px;
+          color: rgb(0 0 0 / 59%);
+        }
+      }
+    }
+  }
+}

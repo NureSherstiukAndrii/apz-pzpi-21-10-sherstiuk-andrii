@@ -1,0 +1,33 @@
+.form__block{
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+
+  &-input{
+    width: 100%;
+    font-size: 18px;
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .show-password{
+    position: absolute;
+    right: 10px;
+    height: 70%;
+    background: white;
+    border: none;
+    border-left: 1px solid lightgray;
+    z-index: 1;
+    margin-top: 6px;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+
+  span{
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 13px;
+    color: red;
+  }
+}

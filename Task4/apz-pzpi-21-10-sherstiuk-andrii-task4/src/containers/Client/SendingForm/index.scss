@@ -1,0 +1,60 @@
+@import "src/styles/mixins";
+
+.interaction-form{
+  background: antiquewhite;
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  padding: 15px;
+  border-radius: 20px;
+  left: 50%;
+  margin: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid;
+  width: 90%;
+
+  @media (min-width: 768px) {
+    width: 700px;
+  }
+
+  &-close-btn{
+    background: none;
+    border: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: opacity 0.4s;
+
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+
+  &-paragraph{
+    font-size:var(--font--size--paragraph);
+  }
+
+  .interaction-block{
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    width: 100%;
+
+    &-input{
+      outline: none;
+      border: 1px solid;
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  &-send-btn{
+    @include btn-theme();
+    width: 100px;
+  }
+}

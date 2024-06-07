@@ -1,0 +1,47 @@
+@import "src/styles/mixins";
+
+.post-form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  position: relative;
+  border: 2px solid lightgray;
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+
+  &-item{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    span{
+      font-size: 20px;
+    }
+
+    textarea{
+      padding: 10px;
+    }
+  }
+
+  &-close-btn{
+    position: absolute;
+    background: none;
+    border:0;
+    cursor: pointer;
+    transition: color 0.4s;
+    border-radius: 10px;
+    padding: 5px;
+    right: 0;
+    top: 0;
+
+    &:hover{
+      color: gray;
+    }
+  }
+
+  .send-post-btn{
+    @include btn-theme();
+  }
+}

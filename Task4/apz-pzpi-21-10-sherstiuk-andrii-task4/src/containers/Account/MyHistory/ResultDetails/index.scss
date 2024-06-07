@@ -1,0 +1,25 @@
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  h2{
+    font-size: 25px;
+  }
+
+  &-temperature{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    &-btn{
+      background: none;
+    }
+  }
+}

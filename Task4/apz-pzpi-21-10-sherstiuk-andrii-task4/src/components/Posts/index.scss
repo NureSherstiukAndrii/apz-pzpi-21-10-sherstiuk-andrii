@@ -1,0 +1,91 @@
+.posts-container{
+  padding: var(--general--padding-768);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  
+  @media (min-width: 992px) {
+    padding: var(--general--padding-992);
+  }
+
+  &-paragraph{
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .posts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+
+    &-item{
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      border: 1px solid;
+      padding: 10px;
+      width: 100%;
+      position: relative;
+
+      &-topic{
+        border-bottom: 2px solid;
+        padding: 5px 0;
+        font-size: 20px;
+      }
+
+      &-btns{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        display: flex;
+        gap: 10px;
+
+        button{
+          background: none;
+          border: 0;
+          cursor: pointer;
+          transition: opacity 0.4s;
+
+          &:hover{
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+
+  .add-post-btn{
+    display: flex;
+    padding: 5px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+
+    &:hover{
+      background-color: lightgray;
+    }
+  }
+
+  .post-form-animation-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .post-form-animation-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .post-form-animation-exit {
+    opacity: 1;
+  }
+  .post-form-animation-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+}

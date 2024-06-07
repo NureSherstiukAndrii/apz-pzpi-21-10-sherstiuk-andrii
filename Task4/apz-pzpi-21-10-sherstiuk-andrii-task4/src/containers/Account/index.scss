@@ -1,0 +1,134 @@
+@import "src/styles/mixins";
+
+.link-log-wrapper{
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--general--padding-768);
+  text-align: center;
+
+  .link-log{
+    background: lightgray;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 20px;
+
+    &-btn{
+      margin-left: 10px;
+      @include btn-theme();
+    }
+  }
+
+}
+
+.account-wrapper{
+  padding: var(--general--padding-768);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+
+  @media (min-width: 992px) {
+    padding: var(--general--padding-992);
+    justify-content: space-around;
+  }
+
+  .img-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .file-upload {
+      position: relative;
+      margin-bottom: 10px;
+      overflow: hidden;
+      width: 100%;
+      height: 35px;
+      background: #6da047;
+      border-radius: 20px;
+      padding: 8px 4px;
+      color: #fff;
+      text-align: center;
+    }
+    .file-upload:hover {
+      background: #7aad55;
+    }
+    .file-upload input[type="file"]{
+      display: none;
+    }
+    .file-upload label {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    .file-upload span {
+      line-height: 36px;
+    }
+  }
+
+  &__photo{
+    width: 300px;
+    border-radius: 30px;
+
+    @media (min-width: 992px) {
+      width: 370px;
+    }
+  }
+
+  .account-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 450px;
+    gap: 15px;
+
+    &__btn{
+      @include btn-theme();
+    }
+
+    .price-wrapper{
+      position: relative;
+
+      span{
+        position: absolute;
+        top: 0;
+        left: 55px;
+      }
+    }
+  }
+
+  button{
+    @include btn-theme();
+  }
+}
+.client-list-animation-enter {
+  opacity: 0;
+}
+.client-list-animation-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.client-list-animation-exit {
+  opacity: 1;
+}
+.client-list-animation-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.company-greeting{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  text-align: center;
+  gap: 30px;
+}
